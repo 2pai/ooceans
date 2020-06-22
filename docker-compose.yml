@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  mosquitto:
+    image: eclipse-mosquitto:1.6.7
+    hostname: mqtt_2pai
+    container_name: mqtt_2pai
+    ports:
+      - 1883:1883
+      - 9001:9001
+    networks:
+      - kiana_net
+networks:
+  kiana_net:
+    driver: bridge
